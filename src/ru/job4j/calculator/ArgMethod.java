@@ -10,11 +10,5 @@ public class ArgMethod {
         int age = 33;
 
         ArgMethod.hello(name);
-
-        ArgMethod.hello(name);
-
-        ArgMethod.hello(name);
-
-        ArgMethod.hello(name);
     }
 }
