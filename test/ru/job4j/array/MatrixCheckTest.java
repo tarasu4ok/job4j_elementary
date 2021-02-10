@@ -50,4 +50,29 @@ public class MatrixCheckTest {
         boolean result = MatrixCheck.monoVertical(input, 0);
         assertThat(result, is(false));
     }
+
+    @Test
+    public void whenDiagonal3x3() {
+        char[][] input = {
+                {'X', ' ', ' '},
+                {' ', 'X', ' '},
+                {' ', ' ', 'X'},
+        };
+        char[] result = MatrixCheck.extractDiagonal(input);
+        char[] expect = {'X', 'X', 'X'};
+        assertThat(result, is(expect));
+    }
+
+    @Test
+    public void whenDiagonal4x4() {
+        char[][] input = {
+                {'X', ' ', ' ', '0'},
+                {' ', '0', ' ', 'X'},
+                {' ', ' ', 'X', ' '},
+                {' ', ' ', 'X', '0'},
+        };
+        char[] result = MatrixCheck.extractDiagonal(input);
+        char[] expect = {'X', '0', 'X', '0'};
+        assertThat(result, is(expect));
+    }
 }
